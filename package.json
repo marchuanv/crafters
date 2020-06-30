@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/marchuanv/crafters/issues"
   },
-  "homepage": "https://github.com/marchuanv/crafters#readme"
+  "homepage": "https://github.com/marchuanv/crafters#readme",
+  "dependencies": {
+    "googleapis": "^52.1.0",
+    "utils": "git+https://github.com/marchuanv/utils.git"
+  }
 }
