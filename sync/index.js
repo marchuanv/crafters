@@ -97,12 +97,11 @@ function Google({ CONTAINER_GOOGLE_PK, CONTAINER_GOOGLE_PK_ID, googleApi, utils 
 	}
 }
 
-const {google} = require("googleapis");
 const utils = require("utils");
 const google= new Google({ 
     CONTAINER_GOOGLE_PK: process.env.CONTAINER_GOOGLE_PK, 
     CONTAINER_GOOGLE_PK_ID: process.env.CONTAINER_GOOGLE_PK_ID, 
-    googleApi: google, 
+    googleApi: require("googleapis"),
     utils
 });
 
