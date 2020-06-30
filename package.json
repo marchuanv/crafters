@@ -1,0 +1,23 @@
+{
+  "name": "crafters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.13.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchuanv/crafters.git"
+  },
+  "author": "Marchuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/crafters/issues"
+  },
+  "homepage": "https://github.com/marchuanv/crafters#readme"
+}
