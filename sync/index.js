@@ -8,16 +8,16 @@ function Google({ CONTAINER_GOOGLE_PK, CONTAINER_GOOGLE_PK_ID, googleApi, utils 
 	this.initialise = async()=>{
 		lineBreaks.lastIndex = 0;
 		const credentials = {
-		  "type": "service_account",
-		  "project_id": "api-project-927120566382",
-		  "private_key": `${CONTAINER_GOOGLE_PK}`,
-		  "private_key_id": `${CONTAINER_GOOGLE_PK_ID}`,
-		  "client_email": "container@api-project-927120566382.iam.gserviceaccount.com",
-		  "client_id": "100432545485983003752",
-		  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-		  "token_uri": "https://oauth2.googleapis.com/token",
-		  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-		  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/container%40api-project-927120566382.iam.gserviceaccount.com"
+			"type": "service_account",
+			"project_id": "api-project-927120566382",
+			"private_key": `${CONTAINER_GOOGLE_PK}`,
+			"private_key_id": `${CONTAINER_GOOGLE_PK_ID}`,
+			"client_email": "ragetoast@api-project-927120566382.iam.gserviceaccount.com",
+			"client_id": "114577838289102656997",
+			"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+			"token_uri": "https://oauth2.googleapis.com/token",
+			"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+			"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ragetoast%40api-project-927120566382.iam.gserviceaccount.com"
 		};
 		credentials.private_key = credentials.private_key.replace(lineBreaks,"\n")
 		auth = new googleApi.auth.JWT(credentials.client_email, null, credentials.private_key, ['https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/drive.file','https://www.googleapis.com/auth/drive.metadata']);
@@ -104,6 +104,8 @@ const google= new Google({
     googleApi: require("googleapis"),
     utils
 });
+
+google.initialise();
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
